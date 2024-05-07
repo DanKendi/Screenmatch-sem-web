@@ -27,4 +27,3 @@ public class ConsumoApi {
         return json;
     }
 }
-
