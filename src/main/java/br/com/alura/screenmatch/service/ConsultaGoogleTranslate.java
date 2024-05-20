@@ -7,7 +7,7 @@ import com.google.cloud.translate.Translation;
 public class ConsultaGoogleTranslate {
     public static String obterTraducao(String texto){
 
-        String apiKey = "AIzaSyAUH0lq2_dn4DjnmlMGkaEE0jkC4yH5A5o";
+        String apiKey = System.getenv("GOOGLE_APIKEY");
 
         Translate translate = TranslateOptions.newBuilder().setApiKey(apiKey).build().getService();
 
