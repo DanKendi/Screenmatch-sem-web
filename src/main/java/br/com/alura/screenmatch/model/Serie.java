@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.model;
 
-import br.com.alura.screenmatch.service.ConsultaGoogleTranslate;
+import br.com.alura.screenmatch.service.ConsultaMyMemory;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class Serie {
         this.genero = Categoria.fromString(dadosSerie.genero().split(",")[0].trim());
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
-        this.sinopse = ConsultaGoogleTranslate.obterTraducao(dadosSerie.sinopse()).trim();
+        this.sinopse = ConsultaMyMemory.obterTraducao(dadosSerie.sinopse()).trim();
     }
 
     public Long getId() {
